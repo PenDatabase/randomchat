@@ -69,9 +69,11 @@ if (process.env.BOT_MODE == 'webhook'){
             port: process.env.PORT
         }
     })
+    console.log("🤖 Running with webhook");
 }
 else {
     bot.launch();
+    console.log("🤖 Running with polling");
 }
 
 // Enable graceful stop
